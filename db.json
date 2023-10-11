@@ -1,0 +1,81 @@
+{
+	"events": [
+		{
+			"id": 1,
+			"title": "Web Dev Conference",
+			"description": "Learn about the latest trends in web development.",
+			"color": "green",
+			"duration": "1 hour"
+		},
+		{
+			"id": 2,
+			"title": "React Workshop",
+			"description": "Hands-on workshop on building React applications.",
+			"color": "blue",
+			"duration": "2 hours"
+		},
+		{
+			"id": 3,
+			"title": "UX/UI Design Meetup",
+			"description": "Discuss best practices and tools for UX/UI design.",
+			"color": "purple",
+			"duration": "1.5 hours"
+		},
+		{
+			"id": 4,
+			"title": "Mobile App Development Seminar",
+			"description": "Explore mobile app development frameworks and tools.",
+			"color": "orange",
+			"duration": "1.5 hours"
+		},
+		{
+			"id": 5,
+			"title": "Data Science Hackathon",
+			"description": "Participate in a data science hackathon and showcase your skills.",
+			"color": "red",
+			"duration": "3 hours"
+		},
+		{
+			"id": 6,
+			"title": "Cloud Computing Symposium",
+			"description": "Discuss the latest advancements in cloud computing technologies.",
+			"color": "cyan",
+			"duration": "2 hours"
+		},
+		{
+			"id": 7,
+			"title": "Cybersecurity Workshop",
+			"description": "Learn about cybersecurity threats and measures to protect your data.",
+			"color": "gray",
+			"duration": "1.5 hours"
+		},
+		{
+			"id": 8,
+			"title": "AI and Machine Learning Conference",
+			"description": "Deep dive into AI and machine learning concepts and applications.",
+			"color": "yellow",
+			"duration": "2.5 hours"
+		},
+		{
+			"id": 9,
+			"title": "Blockchain Technology Seminar",
+			"description": "Explore blockchain technology and its potential impact on various industries.",
+			"color": "pink",
+			"duration": "2 hours"
+		},
+		{
+			"id": 10,
+			"title": "Startup Pitch Competition",
+			"description": "Pitch your startup idea and win exciting prizes.",
+			"color": "brown",
+			"duration": "2 hours"
+		},
+		{
+			"id": 11,
+			"title": "E-commerce Strategy Workshop",
+			"description": "Strategize and optimize your e-commerce platform for success.",
+			"color": "teal",
+			"duration": "2 hours"
+		}
+	]
+}

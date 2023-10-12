@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+	.lightText {
+		@apply text-slate-200;
+	}
+
+	.heading3xl {
+		@apply text-slate-700 font-bold text-3xl;
+	}
+
+	.button {
+		@apply py-2 px-4 rounded-lg opacity-95 font-semibold cursor-pointer hover:transform hover:scale-95 transition-transform duration-300 hover:opacity-100 w-fit;
+	}
+}

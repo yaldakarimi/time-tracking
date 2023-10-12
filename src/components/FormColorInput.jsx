@@ -1,0 +1,40 @@
+import { FaAsterisk } from "react-icons/fa6";
+const FormTextInput = ({
+	value,
+	onChange,
+	placeholder,
+	name,
+	id,
+	label,
+	isRequired,
+	inputCustomClasses,
+}) => {
+	const inputClasses = `${inputCustomClasses} bg-gray-50 border 
+	 text-gray-900 text-sm rounded-lg w-full py-1 px-2 h-12`;
+	return (
+		<div className="mb-2">
+			<label
+				htmlFor={id}
+				className="block mb-2 text-sm font-medium text-gray-900"
+			>
+				<div className="flex gap-1">
+					<span>{label}</span>
+					{isRequired && (
+						<FaAsterisk className="text-gray-400 w-2 h-3 self-start" />
+					)}
+				</div>
+			</label>
+			<input
+				id={id}
+				type="color"
+				name={name}
+				value={value}
+				onChange={onChange}
+				placeholder={placeholder}
+				className={inputClasses}
+			/>
+		</div>
+	);
+};
+
+export default FormTextInput;

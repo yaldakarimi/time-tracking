@@ -4,78 +4,111 @@
 			"id": 1,
 			"title": "Web Dev Conference",
 			"description": "Learn about the latest trends in web development.",
-			"color": "green",
-			"duration": "1 hour"
+			"color": "#ef4444",
+			"startDate": "2023-10-10",
+			"endDate": "2023-10-12",
+			"startTime": "09:00",
+			"endTime": "17:00"
 		},
 		{
 			"id": 2,
 			"title": "React Workshop",
 			"description": "Hands-on workshop on building React applications.",
-			"color": "blue",
-			"duration": "2 hours"
+			"color": "#f59e0b",
+			"startDate": "2023-10-15",
+			"endDate": "2023-10-16",
+			"startTime": "10:00",
+			"endTime": "16:00"
 		},
 		{
 			"id": 3,
 			"title": "UX/UI Design Meetup",
 			"description": "Discuss best practices and tools for UX/UI design.",
-			"color": "purple",
-			"duration": "1.5 hours"
+			"color": "#84cc16",
+			"startDate": "2023-10-20",
+			"endDate": "2023-10-21",
+			"startTime": "14:00",
+			"endTime": "18:00"
 		},
 		{
 			"id": 4,
 			"title": "Mobile App Development Seminar",
 			"description": "Explore mobile app development frameworks and tools.",
-			"color": "orange",
-			"duration": "1.5 hours"
+			"color": "#10b981",
+			"startDate": "2023-10-25",
+			"endDate": "2023-10-27",
+			"startTime": "11:00",
+			"endTime": "16:30"
 		},
 		{
 			"id": 5,
 			"title": "Data Science Hackathon",
 			"description": "Participate in a data science hackathon and showcase your skills.",
-			"color": "red",
-			"duration": "3 hours"
+			"color": "#0891b2",
+			"startDate": "2023-10-30",
+			"endDate": "2023-10-31",
+			"startTime": "09:30",
+			"endTime": "17:30"
 		},
 		{
 			"id": 6,
 			"title": "Cloud Computing Symposium",
 			"description": "Discuss the latest advancements in cloud computing technologies.",
-			"color": "cyan",
-			"duration": "2 hours"
+			"color": "#6366f1",
+			"startDate": "2023-11-05",
+			"endDate": "2023-11-06",
+			"startTime": "13:00",
+			"endTime": "18:00"
 		},
 		{
 			"id": 7,
 			"title": "Cybersecurity Workshop",
 			"description": "Learn about cybersecurity threats and measures to protect your data.",
-			"color": "gray",
-			"duration": "1.5 hours"
+			"color": "#6d28d9",
+			"startDate": "2023-11-10",
+			"endDate": "2023-11-10",
+			"startTime": "15:00",
+			"endTime": "16:30"
 		},
 		{
 			"id": 8,
 			"title": "AI and Machine Learning Conference",
 			"description": "Deep dive into AI and machine learning concepts and applications.",
-			"color": "yellow",
-			"duration": "2.5 hours"
+			"color": "#c026d3",
+			"startDate": "2023-11-15",
+			"endDate": "2023-11-17",
+			"startTime": "09:30",
+			"endTime": "17:00"
 		},
 		{
 			"id": 9,
 			"title": "Blockchain Technology Seminar",
 			"description": "Explore blockchain technology and its potential impact on various industries.",
-			"color": "pink",
-			"duration": "2 hours"
+			"color": "#be123c",
+			"startDate": "2023-11-20",
+			"endDate": "2023-11-21",
+			"startTime": "14:30",
+			"endTime": "19:00"
 		},
 		{
 			"id": 10,
 			"title": "Startup Pitch Competition",
 			"description": "Pitch your startup idea and win exciting prizes.",
-			"color": "brown",
-			"duration": "2 hours"
+			"color": "#fda4af",
+			"startDate": "2023-11-25",
+			"endDate": "2023-11-26",
+			"startTime": "12:00",
+			"endTime": "16:00"
 		},
 		{
 			"id": 11,
 			"title": "E-commerce Strategy Workshop",
 			"description": "Strategize and optimize your e-commerce platform for success.",
-			"color": "teal",
-			"duration": "2 hours"
+			"color": "#3b0764",
+			"startDate": "2023-11-30",
+			"endDate": "2023-12-01",
+			"startTime": "10:00",
+			"endTime": "15:00"
 		}
 	]
 }

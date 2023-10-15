@@ -1,13 +1,14 @@
 import EventItem from "./EventItem";
-import { Link } from "react-router-dom";
 
-const EventsList = ({ data }) => {
+const EventsList = ({ data, onEventDeleteHandler }) => {
 	return (
 		<div>
 			{data?.map((event) => (
-				<Link key={event.id} to={`/events/${event.id}`}>
-					<EventItem data={event} />
-				</Link>
+				<EventItem
+					key={event.id}
+					data={event}
+					onEventDeleteHandler={onEventDeleteHandler}
+				/>
 			))}
 		</div>
 	);

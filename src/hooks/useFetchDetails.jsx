@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useQuery } from "react-query";
 
-const fetchDetails = (url) => {
-	return axios.get(url);
+const fetchDetails = async (url) => {
+	return await axios.get(url);
 };
 
 const useFetchDetails = (url, queryName, id) => {
@@ -10,3 +10,4 @@ const useFetchDetails = (url, queryName, id) => {
 };
 
 export default useFetchDetails;
+ 

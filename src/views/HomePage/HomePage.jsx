@@ -1,20 +1,23 @@
 import { useState } from "react";
 import useFetch from "hooks/useFetch";
 import usePost from "hooks/usePost";
+import useDelete from "hooks/useDelete";
 import { Layout, Modal, CustomError, CustomLoader } from "components";
-import { EventForm, EventList } from "./components";
-import { API_URL } from "common/constants";
+import { EventList } from "./components";
+import { EventForm } from "components/common";
+import { API_URL, PAGE_LIMIT } from "common/constants";
 import { FaPlus } from "react-icons/fa";
 
 const HomePage = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
+	const [pageNumber, setPageNumber] = useState(1);
 
 	const {
 		data: events,
 		isError,
 		error,
 		isLoading,
-	} = useFetch("events", API_URL);
+	} = useFetch(["events", pageNumber], API_URL, pageNumber);
 
 	const {
 		mutate,
@@ -22,9 +25,15 @@ const HomePage = () => {
 		error: postError,
 	} = usePost("events", API_URL);
 
+	const { mutate: deleteMutate } = useDelete();
+
 	const onCreateEvent = (event) => {
 		mutate(event);
 		setIsModalOpen(false);
+	};
+
+	const onEventDeleteHandler = (id) => {
+		deleteMutate(id);
 	};
 
 	if (isLoading) return <CustomLoader />;
@@ -51,7 +60,27 @@ const HomePage = () => {
 			>
 				<EventForm submitHandler={onCreateEvent} />
 			</Modal>
-			<EventList data={events?.data} />
+			<EventList
+				data={events?.data}
+				onEventDeleteHandler={onEventDeleteHandler}
+			/>
+			<div className="flex justify-between">
+				<button
+					className="button bg-slate-500 text-white disabled:bg-slate-400 "
+					disabled={pageNumber === 1}
+					onClick={() => setPageNumber((prevPage) => prevPage - 1)}
+				>
+					Back
+				</button>
+
+				<button
+					className="button bg-slate-500 text-white disabled:bg-slate-400 "
+					disabled={events && events.data.length < PAGE_LIMIT}
+					onClick={() => setPageNumber((prevPage) => prevPage + 1)}
+				>
+					Next
+				</button>
+			</div>
 		</Layout>
 	);
 };

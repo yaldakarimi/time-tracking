@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useMutation, useQueryClient } from "react-query";
 
-const addData = (url, data) => {
-	return axios.post(url, data);
+const addData = async (url, data) => {
+	return await axios.post(url, data);
 };
 
 const usePost = (queryName, url) => {
@@ -24,6 +24,8 @@ const usePost = (queryName, url) => {
 		onError: (_data,_error, context) => {
 			queryClient.setQueryData(queryName, context.prevData);
 		},
+
+	
 
 		onSettled: () => {
 			queryClient.invalidateQueries(queryName);

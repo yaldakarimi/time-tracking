@@ -1,11 +1,15 @@
-import { useParams } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import useFetchDetails from "hooks/useFetchDetails";
 import { API_URL } from "common/constants";
 import { formatDate, calculateDurationFn } from "utils";
-import { Layout, CustomError, CustomLoader } from "components";
+import { Layout, CustomError, CustomLoader, Modal } from "components";
+import { EventForm } from "components/common";
 import { ColorTag } from "./components";
+import useEdit from "hooks/useEdit";
 
 const DetailsPage = () => {
+	const [isModalOpen, setIsModalOpen] = useState(false);
 	const { id } = useParams();
 	const { data, isError, error, isLoading } = useFetchDetails(
 		API_URL,
@@ -13,7 +17,15 @@ const DetailsPage = () => {
 		id
 	);
 
-	console.log();
+	const navigate = useNavigate();
+
+	const { mutate: eventUpdateMutation } = useEdit("events", API_URL);
+
+	const onEditForm = (updatedEvent) => {
+		eventUpdateMutation(updatedEvent);
+		setIsModalOpen(false);
+		navigate("/");
+	};
 
 	if (isLoading) return <CustomLoader />;
 	if (isError) return <CustomError error={error.message} />;
@@ -53,11 +65,32 @@ const DetailsPage = () => {
 				</div>
 			</div>
 
-			<div className="mt-4">
-				<span className="block mb-2 text-darkPurple font-semibold">Event Description: </span>
+			<div className="my-4">
+				<span className="block mb-2 text-darkPurple font-semibold">
+					Event Description:{" "}
+				</span>
 				<p>{data?.data.description}</p>
 			</div>
+			<div className="flex justify-end">
+				<button
+					className="button bg-accent text-white"
+					onClick={() => setIsModalOpen(true)}
+				>
+					Edit Event
+				</button>
+			</div>
 
+			<Modal
+				isOpen={isModalOpen}
+				onClose={() => setIsModalOpen(false)}
+				title="Edit the event"
+			>
+				<EventForm
+					submitHandler={onEditForm}
+					defaultFormValues={data.data}
+					isEdit
+				/>
+			</Modal>
 		</Layout>
 	);
 };

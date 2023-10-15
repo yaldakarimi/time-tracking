@@ -12,6 +12,11 @@
 	}
 
 	.button {
-		@apply py-2 px-4 rounded-lg opacity-95 font-semibold cursor-pointer hover:transform hover:scale-95 transition-transform duration-300 hover:opacity-100 w-fit;
+		@apply py-2 px-4 rounded-lg opacity-95 font-semibold cursor-pointer transition-transform duration-300 w-fit disabled:cursor-default;
 	}
+	
+	.button:hover:not([disabled]) {
+		@apply hover:transform hover:scale-95 hover:opacity-100;
+	}
+	
 }
